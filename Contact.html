@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <!-- Google Maps API -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY" async defer></script>
+  <script>
+    function initMap() {
+      const location = { lat: -25.344, lng: 131.036 };
+      const map = new google.maps.Map(document.getElementById("map"), {
+        zoom: 4,
+        center: location
+      });
+      const marker = new google.maps.Marker({
+        position: location,
+        map: map
+      });
+    }
+  </script>
+</head>
+<body onload="initMap()">
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#"><i class="fas fa-store"></i> E-Commerce</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="HOME.html">HOME</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="ABOUTUS.html">ABOUT US</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="SERVICES.html">SERVICES</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="HowWeWork.html">HOW WE WORK</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="JoinUs.html">JOIN US</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="AJobs.html">AVAILABLE JOBS</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="Contact.html">CONTACT US</a>
+        </li>
+        <li class="nav-item">
+            <a class="btn btn-primary" href="mainpage.html" role="button">Main Page</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Contact Section -->
+  <div class="container mt-5">
+    <h2 class="text-center mb-4">Contact Us</h2>
+    <div class="row">
+      <!-- Contact Form -->
+      <div class="col-md-6">
+        <form>
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" class="form-control" id="name" placeholder="Enter your name">
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" class="form-control" id="email" placeholder="Enter your email">
+          </div>
+          <div class="form-group">
+            <label for="subject">Subject</label>
+            <input type="text" class="form-control" id="subject" placeholder="Enter subject">
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea class="form-control" id="message" rows="5" placeholder="Enter your message"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Send Message</button>
+        </form>
+      </div>
+      <!-- Contact Information -->
+      <div class="col-md-6">
+        <h5 class="mb-3">Contact Information</h5>
+        <ul class="list-unstyled">
+          <li><i class="fas fa-envelope"></i> Email: info@example.com</li>
+          <li><i class="fas fa-phone"></i> Phone: +1234567890</li>
+          <li><i class="fas fa-map-marker-alt"></i> Address: 123 Main St, Anytown, USA</li>
+        </ul>
+        <div id="map" style="height: 300px;"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-light text-center text-lg-start mt-5">
+    <div class="container p-4">
+      <div class="row">
+        <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+          <h5 class="text-uppercase">Contact Us</h5>
+          <ul class="list-unstyled mb-0">
+            <li><i class="fas fa-envelope"></i> Email: info@example.com</li>
+            <li><i class="fas fa-phone"></i> Phone: +1234567890</li>
+            <li><i class="fas fa-map-marker-alt"></i> Address: 123 Main St, Anytown, USA</li>
+          </ul>
+        </div>
+        <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+          <h5 class="text-uppercase">Follow Us</h5>
+          <ul class="list-unstyled">
+            <li><a href="https://www.facebook.com/"><i class="fab fa-facebook"></i> Facebook</a></li>
+            <li><a href="https://www.instagram.com/"><i class="fab fa-instagram"></i> Instagram</a></li>
+            <li><a href="https://www.linkedin.com/"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-4 col-md-12 mb-4 mb-md-0">
+          <h5 class="text-uppercase">Location</h5>
+          <p>123 Main St, City/Town, State</p>
+          <div id="map-footer" style="height: 200px;"></div>
+        </div>
+      </div>
+    </div>
+    <div class="text-center p-3 bg-light">
+      © 2024 E-Commerce Website
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS, Popper.js, and jQuery -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
